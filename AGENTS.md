@@ -11,7 +11,7 @@ Rust binary crate (`some-project`), currently a hello-world skeleton intended to
 - Repo lives in WSL Ubuntu 26.04 at `/home/stefa_ubuntu/some-project`; the Windows UNC view is `\\wsl.localhost\Ubuntu\home\stefa_ubuntu\some-project`.
 - Rust 1.99.1 installed via rustup (`cargo`, `rustfmt`, `clippy`). `~/.profile` sources `$HOME/.cargo/env`; non-login shells may need `. "$HOME/.cargo/env"` first.
 - C linker: `gcc`/`cc` 15.2 (GCC 15). Without it, `cargo test` fails with `linker cc not found`.
-- Host C: ran out of space once (~3 MB free), which broke WSL startup (`Wsl/Service/CreateInstance/E_FAIL`). ~20 GB was reclaimed on 2026-11-12; `~/.wslconfig` still sets `swap=0` as a workaround (can be restored). Keep C: free before large installs.
+- Host C: ran out of space once (~3 MB free), which broke WSL startup (`Wsl/Service/CreateInstance/E_FAIL`). ~39 GB was reclaimed on 2026-11-12 (caches, old Roblox versions, Minecraft); `~/.wslconfig` still sets `swap=0` as a workaround (can be restored). Keep C: free before large installs.
 - Git 2.53 installed. Commit identity: `stdxxc <stdxxc@users.noreply.github.com>`. GitHub SSH key (`~/.ssh/id_ed25519`) is registered and authenticates as `stdxxc`.
 - Prefer running commands through WSL (`wsl -d Ubuntu -- bash -lc '...'`) rather than PowerShell; PowerShell strips `$VAR` in nested Bash snippets.
 - The repo is edited through a Windows UNC path, so keep LF endings. `.gitattributes` enforces `eol=lf`; don't rewrite files as CRLF.
