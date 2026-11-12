@@ -2,6 +2,7 @@
 name = "some-project"
 version = "0.1.0"
 edition = "2024"
+default-run = "some-project"
 rust-version = "1.85"
 
 [dependencies]
